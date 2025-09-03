@@ -53,3 +53,6 @@ dkms.conf
 
 # debug information files
 *.dwo
+backend/app/__pycache__/*
+backend/venv/*
+backend/app/analyzer.py
