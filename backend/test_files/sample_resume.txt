@@ -1,0 +1,32 @@
+John Smith
+john.smith@email.com
+(555) 123-4567
+
+Professional Summary
+Experienced Python developer with 5+ years of software development experience. Skilled in web development, API design, and database management.
+
+Work Experience
+
+Senior Software Developer | Tech Corp | 2020-2025
+• Developed web applications using Python and FastAPI
+• Led a team of 3 developers on multiple projects
+• Improved system performance by 40%
+• Managed $2M budget for infrastructure upgrades
+• Implemented CI/CD pipelines reducing deployment time by 60%
+
+Software Developer | StartupXYZ | 2018-2020  
+• Built REST APIs serving 10,000+ daily users
+• Optimized database queries improving response time by 25%
+• Collaborated with cross-functional teams of 8+ members
+
+Education
+Bachelor of Computer Science
+State University | 2014-2018
+GPA: 3.8/4.0
+
+Skills
+Programming Languages: Python, JavaScript, SQL
+Frameworks: FastAPI, React, Django
+Databases: PostgreSQL, MongoDB, Redis
+Cloud: AWS, Docker, Kubernetes
+Tools: Git, Jenkins, Jira 

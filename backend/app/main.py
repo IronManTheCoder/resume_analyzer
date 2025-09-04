@@ -4,12 +4,14 @@ import time
 import base64
 from .models import AnalyzeRequest, AnalyzeResponse, ScoreBreakdown
 from .analyzer import ResumeAnalyzer
+from .parsers import FileParser
 
 # Create FastAPI application instance
 app = FastAPI(title="Resume Analyzer API", version="1.0.0")
 
-# Initialize the analyzer
+# Initialize the analyzer and file parser
 analyzer = ResumeAnalyzer()
+file_parser = FileParser()
 
 # Configure CORS for local development
 origins = [
@@ -46,13 +48,9 @@ def analyze_resume(request: AnalyzeRequest):
     start_time = time.time()
     
     try:
-        # Decode the base64 resume file (for now, treat as plain text)
-        # TODO: Add proper PDF/DOCX parsing in next step
-        try:
-            resume_text = base64.b64decode(request.resume_file).decode('utf-8')
-        except:
-            # If it's not valid base64, treat as plain text for testing
-            resume_text = request.resume_file
+        # Parse the uploaded file using our file parser
+        print(f"DEBUG: Processing {request.file_type.upper()} file")
+        resume_text = file_parser.parse_file(request.resume_file, request.file_type)
         
         # Run the analysis
         analysis_result = analyzer.analyze_resume(resume_text, request.job_description)
